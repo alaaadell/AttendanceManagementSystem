@@ -1,0 +1,101 @@
+﻿@model IEnumerable<AttendanceManagementSystem.models.Department>
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+@*<h1>Departments</h1>*@
+
+<p>
+
+    @*<a asp-action="Create" class="btn btn-primary">Create New</a>*@
+
+    <style>
+
+        
+        body {
+            font-family: Arial;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 8px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 15%;
+            background: #f1f1f1;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        form.example button {
+            float: left;
+            width: 3%;
+            padding: 8px;
+            background: #dc143c;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+            form.example button:hover {
+                background: #dc143c;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                
+                <td>
+                    <a asp-action="Edit" style="color: #dc143c;" asp-route-id="@item.Id">Edit</a> |
+                    @*<a asp-action="Details"  style="color: #dc143c;" asp-route-id="@item.Id">Details</a> |*@
+                    <a asp-action="Delete" style="color: #dc143c;" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form class="example" asp-action="search" asp-controller="department" style="margin:auto;max-width:300px">
+    <input type="text" placeholder="Search.." name="depName">
+    <button type="submit"><i class="fa fa-search"></i></button>
+
+</form>
+<div class="form-group">
+    <a asp-action="Create" id=" create" class="btn btn-primary">Create New</a>
+</div>

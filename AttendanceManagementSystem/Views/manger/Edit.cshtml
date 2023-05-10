@@ -1,0 +1,52 @@
+﻿@model AttendanceManagementSystem.models.Manger
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+@*<h4>Edit Manger</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Eamil" class="control-label"></label>
+                <input asp-for="Eamil" class="form-control" />
+                <span asp-validation-for="Eamil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" id="back" class="btn btn-primary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--<div>
+    <a asp-action="Index" id="back" class="btn btn-primary">Back to List</a>-->
+    @*<style>
+        #back {
+            top: 40.7%;
+            left: 18%;
+            /*  right:50%;*/
+            /*bottom: 70%;*/
+            /*  width: 100px;
+                        height:20px;*/
+            position: absolute;
+            z-index: 2;
+        }
+    </style>*@
+<!--</div>-->
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,54 @@
+﻿@model AttendanceManagementSystem.models.Attendance
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.traineeId.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.traineeId.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Day)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Day)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Start)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Start)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Finish)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Finish)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOfHours)
+        </dt>
+        <dd class="col-sm-10">            
+            @Html.DisplayFor(model => model.NoOfHours)            
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>

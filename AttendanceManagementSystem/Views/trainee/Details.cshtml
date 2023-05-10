@@ -1,0 +1,51 @@
+﻿@model AttendanceManagementSystem.models.Trainee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        @*<dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>*@
+        <dt class="col-sm-2">
+            <label for="dname">Department</label>
+
+            @Html.DisplayNameFor(model => model.departmentId.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.departmentId.Name)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="mname">Manger</label>
+            @Html.DisplayNameFor(model => model.managerId.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.managerId.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary"asp-route-id="@Model.Id">Edit</a> 
+    <a asp-action="Index"class="btn btn-primary">Back to List</a>
+</div>

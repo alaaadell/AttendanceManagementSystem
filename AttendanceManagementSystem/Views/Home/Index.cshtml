@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="shortcut icon" href="~/Style/img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>SWD-Attendance</title>
+</head>
+<body>
+    <form ... style="background: url('@Url.Content("~/Style/img/5.jpg")');
+        background-size: auto;
+        padding: 5px;
+       
+    }">
+        <!-- Your content here -->
+     
+            <p>
+                <strong> welcome To <br />SWD-Attendance</strong>
+                <style>
+                    p {
+                        width: 600px;
+                        height: 300px;
+                        margin: 20% 30%;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: black;
+                        font-size: 60px;
+                        font-family: courier;
+                    }
+                </style>
+            </p>
+       
+        <button type="submit" class="btn btn-primary" asp-action="Index" asp-controller="Attendance"><strong>Login</strong><i class="fa fa-search"></i></button>
+        <style>
+
+            .btn {
+                top: 65%;
+                left: 40%;
+                /*  right:50%;*/
+                /*bottom: 70%;*/
+                /*  width: 100px;
+                        height:20px;*/
+                position: absolute;
+                z-index: 2;
+                background-color: black;
+                color: white;
+                border: 1px solid white;
+                cursor: pointer;
+                padding: 30px 111px;
+                border-radius: 10px;
+                font-size: 25px;
+                text-align: center;
+                text-decoration-thickness: auto;
+            }
+
+                .btn:hover {
+                    background: black;
+                }
+        </style>
+
+
+
+
+    </form>
+    @*<img src="~/Style/img/project.png" style="width:100%; height:100%;"/>*@
+
+</body>
+</html>
